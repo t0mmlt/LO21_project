@@ -1,0 +1,42 @@
+/*
+bool if_proposition_belong_to_rule (Rule *rule, char proposition){
+
+
+    if (rule->premise == NULL){
+        return false;
+    }else{
+        if (rule->premise == proposition){
+            return true;
+        }else{
+            return if_proposition_belong_to_rule(premise->next, proposition)
+        }
+    }
+}
+*/
+//IMPOSSIBLE CAR Rule->Premise->next et rule->premise == proposition absurde et ne peut etre changer car récursif
+
+empty fonction
+/* simplifiable en         
+    return (rule->premise == NULL); */
+
+Que ce passe t'il si on ajoute une propososition à une prémisse déja existante : 
+-> ne sert à rien [on part donc sur le cas ou une proposition en peut pas etre plusieures fois dans une meme prémisse]
+
+pas de fonction pour retirer ccl ?
+
+Vérification des bords : Pensez à tester votre code avec différents scénarios, 
+y compris les bords (comme la manipulation de règles vides, de prémisse vide, 
+d'ajout/suppression de propositions, etc.).
+
+Types généraux??*
+Acents ??
+
+faire un shema pour voir l'imbriquation de chaques trucs dans chaques trucs
+
+Rule *my_rule = (Rule *)malloc(sizeof(Rule));
+    if (my_rule != NULL) {
+
+
+    } else {
+    printf("Erreur lors de l'allocation de mémoire pour la règle.\n");
+}
