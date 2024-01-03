@@ -43,7 +43,6 @@ void inference_engine(Fact_base *facts, KB *knowledge_base) {
             proposition = proposition->next;
         }
     }
-    return knowledge_base;
 }
 
 

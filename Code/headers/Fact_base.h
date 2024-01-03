@@ -6,7 +6,7 @@
 typedef Proposition *Fact_base;
 
 // Création d'une Fact_base vide
-Fact_base create_empty_fact_base() {
+Fact_base * create_empty_fact_base() {
     return NULL; // Une Fact_base vide est simplement représentée par un pointeur NULL
 }
 
