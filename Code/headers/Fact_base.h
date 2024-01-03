@@ -1,5 +1,5 @@
-#include "../headers/Rule.h"
-#include "../headers/knowledge_base.h"
+#include "Rule.h"
+#include "knowledge_base.h"
 #include <stdio.h>
 #include <stdlib.h>
 

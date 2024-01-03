@@ -1,7 +1,8 @@
 #ifndef KNOWLEDGE_BASE_H
 #define KNOWLEDGE_BASE_H
 
-#include "../headers/rule.h"
+#include "Rule.h"
+
 
 // Structure pour représenter une base de connaissances
 typedef struct Knowledge_Base {

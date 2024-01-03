@@ -47,11 +47,32 @@ void inference_engine(Fact_base *facts, KB *knowledge_base) {
 
 
 int main() {
+    // Création d'une base de faits vide
     Fact_base *facts = create_empty_fact_base();
-    // Ajoutez des faits à la base de faits si nécessaire
 
+    // Ajout de propositions à la base de faits
+    add_proposition_to_fact_base(facts, 'A');
+    add_proposition_to_fact_base(facts, 'B');
+    add_proposition_to_fact_base(facts, 'C');
+
+    // Affichage de la base de faits
+    display_fact_base(*facts);
+
+    // Création d'une base de connaissances vide
     KB *knowledge_base = create_empty_KB();
-    // Ajoutez des règles à la base de connaissances si nécessaire en utilisant add_tail_rule_to_KB()
+
+    // Création de règles et ajout à la base de connaissances
+    Rule *rule1 = create_empty_rule();
+    add_tail_proposition_to_premise(rule1, 'A');
+    add_tail_proposition_to_premise(rule1, 'B');
+    create_conclusion_to_rule(rule1, 'X');
+    add_tail_rule_to_KB(knowledge_base, rule1);
+
+    Rule *rule2 = create_empty_rule();
+    add_tail_proposition_to_premise(rule2, 'B');
+    add_tail_proposition_to_premise(rule2, 'C');
+    create_conclusion_to_rule(rule2, 'Y');
+    add_tail_rule_to_KB(knowledge_base, rule2);
 
     // Appliquer le moteur d'inférence pour déduire de nouveaux faits
     inference_engine(facts, knowledge_base);
